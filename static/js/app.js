@@ -653,14 +653,11 @@ $(function(){
        
         var phoneRex =  /^(13[0-9]{9})|(14[0-9]{9})|(15[0-9]{9})|(18[0-9]{9})|(17[0-9]{9})$/;
 
-        
-        if(!clicked){
-            clicked = 1;
             if (phone=="" || phoneRex.test(phone)==false || phone.length>11){
                         alert("您输入的手机号有误")
-                        clicked = 0;
             }
-            else{
+            else if(!clicked){
+                clicked = 1;
                 $.ajax({
 
                 url: '/lottery',
@@ -731,10 +728,10 @@ $(function(){
                 error:function(data){
                     clicked = 0;
                 }
-            });  
+                });  
             }
 
-        }
+        
   
 
     }); 
@@ -746,13 +743,11 @@ $(function(){
         var phoneRex =  /^(13[0-9]{9})|(14[0-9]{9})|(15[0-9]{9})|(18[0-9]{9})|(17[0-9]{9})$/;
         console.log(phone);
 
-        if(!clicked){
-            clicked = 1;
             if (phone=="" || phoneRex.test(phone)==false || phone.length>11){
                         alert("您输入的手机号有误")
-                        clicked = 0;
             }
-            else{
+            else if(!clicked){
+                clicked = 1;
                 $.ajax({
                 url: '/lottery',
                 type: 'post',
@@ -820,7 +815,7 @@ $(function(){
                 }
                 });
             }
-        } 
+        
     }); 
 
     
