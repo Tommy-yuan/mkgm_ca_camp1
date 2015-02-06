@@ -725,7 +725,7 @@ $(function(){
                             clicked = 0;
                         }else{
 			                clicked = 0;	
-			         };
+			            };
                     }
                 },
                 error:function(data){
@@ -818,7 +818,7 @@ $(function(){
                 error:function(data){
                     clicked = 0;
                 }
-            });
+                });
             }
         } 
     }); 
