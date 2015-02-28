@@ -621,7 +621,7 @@ $(function(){
             if($(this).attr('id') === 'input-mobile' ){
                 if($.trim($(this).val()) === ''){
                     $(this).val('输入手机号马上抢福袋!');
-                    clicked = 0;
+                    // clicked = 0;
                 }
             }
         }).on('focus', 'input', function(){
@@ -636,7 +636,7 @@ $(function(){
             if($(this).attr('id') === 'input-mobile2' ){
                 if($.trim($(this).val()) === ''){
                     $(this).val('输入手机号来抢ta的福袋!');
-                    clicked = 0;
+                    // clicked = 0;
                 }
             }
         }).on('focus', 'input', function(){
@@ -655,6 +655,8 @@ $(function(){
 
             if (phone=="" || phoneRex.test(phone)==false || phone.length>11){
                         alert("您输入的手机号有误")
+                        //跳出确认手机号方法
+                        return;
             }
             else if(!clicked){
                 clicked = 1;
